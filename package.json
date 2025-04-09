@@ -6,6 +6,7 @@
   "module": "lib/screensManagement.mjs",
   "author": "Nabil Redmann <repo@bananaacid.de",
   "license": "MIT",
+  "homepage": "https://stackblitz.com/~/github.com/BananaAcid/vue3-screensmanagement?file=README.md",
   "scripts": {
     "dev": "cd ./example && vite",
     "postinstall": "rm /home/projects/vue3-screensmanagement/example/composables/screensManagement.mjs ; ln -s /home/projects/vue3-screensmanagement/lib/screensManagement.mjs /home/projects/vue3-screensmanagement/example/composables/screensManagement.mjs"

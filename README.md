@@ -1,6 +1,44 @@
 # inter window communication, screen handling
 
-This is a basic example of opening windows and communicating with them. It works without any server communication, once it is loaded (inter window communication).
+Handles the Window Management API.
+
+The included functions are vue-composables, providing reactive properties to the API.
+
+## install
+
+```bash
+npm i vue3-screensmanagement
+```
+
+### Website import
+
+Import it into your website project:
+
+```js
+import {...} from 'https://unpkg.com/vue3-screensmanagement';
+```
+
+or add it first to an importmap for easier import:
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "vue3-screensmanagement": "https://unpkg.com/vue3-screensmanagement"
+    }
+  }
+</script>
+
+<script type="module">
+import {...} from 'vue3-screensmanagement';
+</script>
+```
+
+
+---
+
+# Examples
+
+This are basic examples of opening windows and communicating with them. It works without any server communication, once it is loaded (inter window communication).
 
 ## Example 1: src/views/Home.vue
 
@@ -10,13 +48,13 @@ Shows the communication part only.
 
 Primarely shows the screen handling on top of the communication part.
 
-The screen data and permission logic exists inside of a composable, [`src/composables/screensManagement.js`](?file=src/composables/screensManagement.js)
+The screen data and permission logic exists inside of a composable, [`lib/screensManagement.mjs`](?file=lib/screensManagement.mjs)
 
 A simple example how to use the screen part:
 
 ```html
 <script setup>
-  import { useScreensRequest, useScreens, useScreensPossible, useScreensGranted, useScreenUtils } from 'screensManagement.js';
+  import { useScreensRequest, useScreens, useScreensPossible, useScreensGranted, useScreenUtils } from 'vue3-screensmanagement';
 
   let { request, message } = useScreensRequest(); // minimum requirement
   let { screens, current } = useScreens();        // minimum requirement
