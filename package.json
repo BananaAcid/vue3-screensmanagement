@@ -1,0 +1,42 @@
+{
+  "name": "vue3-screensmanagement",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/screensManagement.mjs",
+  "module": "lib/screensManagement.mjs",
+  "author": "Nabil Redmann <repo@bananaacid.de",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cd ./example && vite",
+    "postinstall": "rm /home/projects/vue3-screensmanagement/example/composables/screensManagement.mjs ; ln -s /home/projects/vue3-screensmanagement/lib/screensManagement.mjs /home/projects/vue3-screensmanagement/example/composables/screensManagement.mjs"
+  },
+  "exports": {
+    "/lib": {
+      "import": "./lib/screensManagement.mjs"
+    }
+  },
+  "unpkg": "lib/screensManagement.mjs",
+  "jsdelivr": "lib/screensManagement.mjs",
+  "keywords": [
+    "vue",
+    "esm",
+    "es6",
+    "browser",
+    "screen",
+    "screenapi",
+    "window-management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BananaAcid/vue3-screensmanagement.git"
+  },
+  "devDependencies": {
+    "pug": "^3.0.3",
+    "vue": "^3.5.11",
+    "vue-router": "^4.4.5",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "less": "^4.2.2",
+    "less-loader": "^12.2.0",
+    "vite": "^5.4.8"
+  }
+}

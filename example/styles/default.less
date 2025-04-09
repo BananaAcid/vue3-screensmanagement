@@ -1,0 +1,58 @@
+aside {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  text-align: center;
+  padding: 0.5em;
+
+  > * {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  > :not(:empty) {
+    opacity: 1;
+
+    margin: 0.2em;
+    padding: 0.5em 1em;
+
+    border: 1px solid blue;
+    background-color: rgba(blue, 25%);
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  text-align: center;
+  padding: 0.5em;
+}
+
+a:not([href]) {
+  cursor: pointer;
+}
+
+:root,
+body {
+  background-color: #242424 !important;
+  color: white;
+}
+
+summary {
+  cursor: pointer;
+  color: #535bf2;
+  font-weight: 500;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 2px solid gray;
+}
+
+button {
+  color: white;
+}
